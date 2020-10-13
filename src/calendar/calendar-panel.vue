@@ -23,22 +23,6 @@
       >
         <i :class="`${prefixClass}-icon-left`"></i>
       </button>
-      <button
-        v-show="showIconDoubleArrow"
-        type="button"
-        :class="`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-icon-double-right`"
-        @click="handleIconDoubleRightClick"
-      >
-        <i :class="`${prefixClass}-icon-double-right`"></i>
-      </button>
-      <button
-        v-show="showIconArrow"
-        type="button"
-        :class="`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-icon-right`"
-        @click="handleIconRightClick"
-      >
-        <i :class="`${prefixClass}-icon-right`"></i>
-      </button>
       <span :class="`${prefixClass}-calendar-header-label`">
         <template v-if="panel === 'year'">
           <span>{{ calendarDecade }}</span>
@@ -67,6 +51,22 @@
           </button>
         </template>
       </span>
+      <button
+        v-show="showIconArrow"
+        type="button"
+        :class="`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-icon-right`"
+        @click="handleIconRightClick"
+      >
+        <i :class="`${prefixClass}-icon-right`"></i>
+      </button>
+      <button
+        v-show="showIconDoubleArrow"
+        type="button"
+        :class="`${prefixClass}-btn ${prefixClass}-btn-text ${prefixClass}-btn-icon-double-right`"
+        @click="handleIconDoubleRightClick"
+      >
+        <i :class="`${prefixClass}-icon-double-right`"></i>
+      </button>
     </div>
     <div :class="`${prefixClass}-calendar-content`">
       <table-year
